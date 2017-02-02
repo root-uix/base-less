@@ -1,0 +1,105 @@
+@import "../base.less";
+
+@icon-path: "../../icons";
+@white: #fff;
+@black: #000;
+@red: #d9534f;
+@orange: #f0ad4e;
+@yellow: #ffd500;
+@green: #5cb85c;
+@blue: #0275d8;
+@teal: #5bc0de;
+@pink: #ff5b77;
+@purple: #613d7c;
+// Create grayscale
+@gray-dark: #292b2c;
+@gray: #464a4c;
+@gray-light: #636c72;
+@gray-lighter: #eceeef;
+@gray-lightest: #f7f7f9;
+// Reassign color vars to semantic color scheme
+@primary: @blue;
+@primary--: @white;
+@success: @green;
+@success--: @white;
+@info: @teal;
+@info--: @white;
+@warning: @orange;
+@warning--: @white;
+@danger: @red;
+@danger--: @white;
+button@{n},
+button@{ruix},
+input[type=submit],
+[btn] {
+    &[primary] {
+        border-color: darken(@primary, 6%);
+        background: @primary;
+        color: @primary--;
+        font-weight: 700;
+        &:not(:disabled):hover {
+            background: darken(@primary, 6%)
+        }
+    }
+    &[success] {
+        border-color: darken(@success, 6%);
+        background: @success;
+        color: @success--;
+        font-weight: 700;
+        &:not(:disabled):hover {
+            background: darken(@success, 6%)
+        }
+    }
+    &[info] {
+        border-color: darken(@info, 6%);
+        background: @info;
+        color: @info--;
+        font-weight: 700;
+        &:not(:disabled):hover {
+            background: darken(@info, 6%)
+        }
+    }
+    &[warning] {
+        border-color: darken(@warning, 6%);
+        background: @warning;
+        color: @warning--;
+        font-weight: 700;
+        &:not(:disabled):hover {
+            background: darken(@warning, 6%)
+        }
+    }
+    &[danger] {
+        border-color: darken(@danger, 6%);
+        background: @danger;
+        color: @danger--;
+        font-weight: 700;
+        &:not(:disabled):hover {
+            background: darken(@danger, 6%)
+        }
+    }
+}
+
+@{n}[primary],
+@{ruix}[primary] {
+    color: @primary;
+}
+
+@{n}[success],
+@{ruix}[success] {
+    color: @success;
+}
+
+@{n}[info],
+@{ruix}[info] {
+    color: @info;
+}
+
+@{n}[warning],
+@{ruix}[warning] {
+    color: @warning;
+}
+
+@{n}[danger],
+@{ruix}[danger] {
+    color: @danger;
+}

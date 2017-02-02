@@ -1,0 +1,43 @@
+@import (reference) "_variables";
+
+/* Font Family is set in @variables */
+
+.hx(@fs, @lh, @ls) {
+    font-size: @fs;
+    line-height: @lh;
+    letter-spacing: @ls
+}
+
+h1@{n},
+h1@{ruix} {
+    .hx(4rem, 1.1, -1px)
+}
+
+h2@{n},
+h2@{ruix} {
+    .hx(3rem, 1.1, -0.05rem)
+}
+
+h3@{n},
+h3@{ruix} {
+    .hx(2.5rem, 1.3, -0.05rem)
+}
+
+h4@{n},
+h4@{ruix} {
+    .hx(2rem, 1.3, -0.05rem)
+}
+
+h5@{n},
+h5@{ruix} {
+    .hx(@fs-m, 1.5, 0rem);
+    text-transform: uppercase;
+    font-weight: 700
+}
+
+h6@{n},
+h6@{ruix} {
+    .hx(@fs-m, 1.5, 0rem);
+    text-transform: uppercase;
+    font-weight: 400
+}

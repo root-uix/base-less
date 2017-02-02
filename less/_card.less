@@ -1,0 +1,33 @@
+@import (reference) "_variables";
+card {
+    background: #fff;
+    display: block;
+    padding: 2rem;
+    box-shadow: @box-shadow;
+    border-radius: 2px;
+    margin-bottom: 2rem;
+    hr@{n},
+    hr@{ruix} {
+        margin: 1rem 0;
+    }
+    &:last-child {
+        margin-bottom: 0
+    }
+    >img@{n},
+    >img@{ruix} {
+        width: ~"calc(100% + 4rem)";
+        max-width: none;
+        margin: 0 0 2rem -2rem;
+        display: block;
+        &:first-child {
+            margin: -2rem 0 2rem -2rem;
+            border-top-left-radius: 2px;
+            border-top-right-radius: 2px;
+        }
+        &:last-child {
+            margin: 0 0 -2rem -2rem;
+            border-bottom-left-radius: 2px;
+            border-bottom-right-radius: 2px;
+        }
+    }
+}

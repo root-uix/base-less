@@ -1,0 +1,43 @@
+{
+  "name": "@root-uix/base-less",
+  "version": "0.0.1",
+  "description": "Root UIX - Base UI Framework in LESS",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "build": "npm run clean && npm-run-all --parallel build:base build:theme:*",
+    "build:base": "lessc --clean-css='--advanced' less/base.less css/ruix.min.css",
+    "build:map:base": "npm run build:base -- --source-map-less-inline --source-map-map-inline",
+    "build:theme:bs": "lessc --clean-css='--advanced' less/themes/bootstrap.less css/ruix.bs.min.css",
+    "build:map:theme:bs": "npm run build:base -- --source-map-less-inline --source-map-map-inline",
+    "build:theme:md": "lessc --clean-css='--advanced' less/themes/materialdesign.less css/ruix.md.min.css",
+    "build:map:theme:md": "npm run build:base -- --source-map-less-inline --source-map-map-inline",
+    "clean": "rm -rf css/*||del /q css\\*",
+    "prepublish": "npm run clean && npm run build",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/root-uix/base-less.git"
+  },
+  "keywords": [
+    "css",
+    "less",
+    "rootuix",
+    "ui",
+    "framework"
+  ],
+  "author": "Ioneyed <robert.buchanan@ioneyed.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/root-uix/base-less/issues"
+  },
+  "homepage": "https://github.com/root-uix/base-less#readme",
+  "devDependencies": {
+    "less": "^2.7.2",
+    "less-plugin-clean-css": "^1.5.1",
+    "npm-run-all": "^4.0.1"
+  }
+}
